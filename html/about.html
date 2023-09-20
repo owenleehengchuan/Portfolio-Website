@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O.GRAPHIC.com</title>
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico" />
+    <link href="nav.css" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: akira;
+        src: url("akira.otf");
+      }
+
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 182, 193, 0.8),
+            rgba(255, 182, 193, 0.9),
+            lightpink,
+            lightpink
+          ),
+          url("../image/background1.png");
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 75vh;
+
+        font-size: 20px;
+        font-family: "Akira", "Time News Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .heading {
+        padding: auto;
+        margin: auto;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .width-70 {
+        width: 70%;
+      }
+
+      .width-90 {
+        width: 90%;
+      }
+
+      .margin-lr-1em {
+        margin: auto 1em;
+      }
+
+      .mar-top-1em {
+        margin-top: 1em;
+      }
+
+      .m-center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #image2 {
+        max-width: 100%;
+        width: 750px;
+        height: 750px;
+      }
+
+      .hr {
+        color: black;
+        background-color: black;
+        height: 2px;
+        min-width: 100vh;
+      }
+
+      .quote {
+        font-size: 0.7em;
+        text-align: center;
+      }
+
+      .grid-2-4 {
+        display: grid;
+        grid-template-columns: 40% auto auto auto;
+        grid-gap: 1em 3em;
+        margin: 1em auto auto auto;
+        align-items: center;
+      }
+
+      .aboutme {
+        font-size: 30px;
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      .aboutme p {
+        margin: auto;
+        text-align: justify;
+      }
+
+      .intro {
+        font-size: 20px;
+      }
+
+      .imageaboutme {
+        object-fit: cover;
+        aspect-ratio: 1;
+        width: 100%;
+        padding: 5px;
+      }
+
+      .myabilities {
+        object-fit: cover;
+        aspect-ratio: 1;
+        width: 100%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagecontainer">
+      <div class="contentwrap">
+        <h1 class="heading">O.GRAPHIC</h1>
+
+        <div class="menu">
+          <a href="index.html">
+            <div>HOME</div>
+          </a>
+          <a href="about.html">
+            <div>ABOUT</div>
+          </a>
+          <a href="contact.html">
+            <div>CONTACT</div>
+          </a>
+          <a href="work.html">
+            <div>WORK</div>
+          </a>
+          <a href="testimony.html">
+            <div>TESTIMONY</div>
+          </a>
+        </div>
+
+        <div class="grid-2-4 m-center width-90">
+          <div class="aboutme">
+            <h2>ABOUT ME</h2>
+            <p class="intro">
+              I'm Owen, and my passion lies in creating digital art. To me, art
+              is a form of expression that effortlessly connects with us through
+              its simple yet powerful visual language.
+            </p>
+          </div>
+          <img class="imageaboutme" src="../image/aboutme1.png" />
+          <img class="imageaboutme" src="../image/aboutme2.png" />
+          <img class="imageaboutme" src="../image/aboutme3.png" />
+
+          <div class="aboutme">
+            <h2>MY ABILITIES</h2>
+            <p class="intro">
+              My abilities encompass a wide range of creative talents, as I am
+              proficient in Adobe Illustrator and Photoshop, enabling me to
+              craft intricate digital designs with precision. Additionally, my
+              expertise in photography empowers me to capture mesmerizing
+              moments, making me a versatile and accomplished creative
+              professiona
+            </p>
+          </div>
+          <img class="myabilities" src="../image/aiicon.png" />
+          <img class="myabilities" src="../image/adobepng.png" />
+          <img class="myabilities" src="../image/camera.png" />
+        </div>
+      </div>
+
+      <div class="grid-1-2 footer">
+        <p>© Owen Lee sdn bhd 2023</p>
+        <div>
+          <ul>
+            <li>
+              <img class="iconcontact" src="../image/email1.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="mailto:owen@gmail.com"
+                >owen@gmail.com</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/ig.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://instagram.com/olhc_x_x/"
+                >olhc_x_x</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/fb.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://www.facebook.com/owenleehengchuan/"
+                >Owen Lee</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

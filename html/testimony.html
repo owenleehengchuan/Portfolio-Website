@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O.GRAPHIC.com</title>
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico" />
+    <link href="nav.css" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: akira;
+        src: url("akira.otf");
+      }
+
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 182, 193, 0.8),
+            rgba(255, 182, 193, 0.9),
+            lightpink,
+            lightpink
+          ),
+          url("../image/background1.png");
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 75vh;
+
+        font-size: 20px;
+        font-family: "Akira", "Time News Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .heading {
+        padding: auto;
+        margin: auto;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .width-80 {
+        width: 80%;
+      }
+
+      .margin-lr-1em {
+        margin: auto 1em;
+      }
+
+      .mar-top-1em {
+        margin-top: 1em;
+      }
+
+      .m-center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .testimonypicture {
+        width: 250px;
+        height: 250px;
+        margin: 0.5em auto;
+      }
+
+      .grid-2-2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 3em 3em;
+        margin: 1em auto auto auto;
+        align-items: center;
+      }
+
+      .testimonies {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: min-content;
+        grid-gap: 1.5em;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        border: black 2px solid;
+        border-radius: 5px;
+        padding: 2em;
+        height: 22em;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .testimonies p {
+        text-align: justify;
+        margin: 0 auto;
+      }
+
+      .formcontainer {
+        grid-column: 2 span / 2;
+        padding: 1em 3em;
+        background-color: rgba(255,255,255, 0.8);
+        border: black 2px solid;
+        border-radius: 5px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 1em;
+        border: 1px solid #222;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+
+      label {
+        padding: 1em 1em 0.5em 0;
+        display: inline-block;
+      }
+
+      input[type="submit"] {
+        background-color: #202020;
+        color: whitesmoke;
+
+        padding: 1em 1.5em;
+        margin: 1em 0;
+
+        border: black 1px solid;
+        border-radius: 4px;
+
+        cursor: pointer;
+        float: right;
+      }
+
+      .inputcontainer {
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagecontainer">
+      <div class="contentwrap">
+        <h1 class="heading">O.GRAPHIC</h1>
+
+        <div class="menu">
+          <a href="index.html">
+            <div>HOME</div>
+          </a>
+          <a href="about.html">
+            <div>ABOUT</div>
+          </a>
+          <a href="contact.html">
+            <div>CONTACT</div>
+          </a>
+          <a href="work.html">
+            <div>WORK</div>
+          </a>
+          <a href="testimony.html">
+            <div>TESTIMONY</div>
+          </a>
+        </div>
+
+        <div class="grid-2-2 width-80">
+          <div class="testimonies">
+            <img class="testimonypicture" src="../image/testimoni1.png" />
+            <p>
+              Your art is truly captivating and thought-provoking. The depth of
+              emotion and meaning conveyed in your pieces is remarkable. Each
+              stroke of your brush or line on the canvas seems to tell a unique
+              story, inviting viewers to contemplate and explore their own
+              emotions. Your work is a testament to your talent and creativity.
+            </p>
+          </div>
+          <div class="testimonies">
+            <img class="testimonypicture" src="../image/cat.jpg" />
+            <p>
+              Your art is bold and expressive, leaving a lasting impact on
+              anyone who encounters it. The vibrant colors and dynamic forms in
+              your work evoke a range of emotions, from joy to introspection.
+              Your ability to convey the essence of your subjects with such
+              flair is nothing short of remarkable.
+            </p>
+          </div>
+
+          <div class="formcontainer">
+            <h2>Have something you want to say?</h2>
+            <!-- We use onsubmit to fake a response, using javascript alert -->
+            <form onsubmit="alert('Your message has been submitted!')">
+              <div class="inputcontainer">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="inputcontainer">
+                <label for="phoneno">Phone Number</label>
+                <input
+                  type="text"
+                  id="phoneno"
+                  name="phoneno"
+                  placeholder="012-345 6789"
+                />
+              </div>
+              <div class="inputcontainer">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="johndoe@johndoe.com"
+                />
+              </div>
+              <div class="inputcontainer">
+                <label for="comment">Comment</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  style="height: 10em"
+                ></textarea>
+              </div>
+              <div class="inputcontainer">
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-1-2 footer">
+        <p>© Owen Lee sdn bhd 2023</p>
+        <div>
+          <ul>
+            <li>
+              <img class="iconcontact" src="../image/email1.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="mailto:owen@gmail.com"
+                >owen@gmail.com</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/ig.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://instagram.com/olhc_x_x/"
+                >olhc_x_x</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/fb.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://www.facebook.com/owenleehengchuan/"
+                >Owen Lee</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

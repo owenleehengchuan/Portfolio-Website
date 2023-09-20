@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O.GRAPHIC.com</title>
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico" />
+    <link href="nav.css" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: akira;
+        src: url("akira.otf");
+      }
+
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 182, 193, 0.8),
+            rgba(255, 182, 193, 0.9),
+            lightpink,
+            lightpink
+          ),
+          url("../image/background1.png");
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 75vh;
+
+        font-size: 20px;
+        font-family: "Akira", "Time News Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .heading {
+        padding: auto;
+        margin: auto;
+      }
+
+      p {
+        margin: auto;
+        text-align: justify;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .width-70 {
+        width: 70%;
+      }
+
+      .margin-lr-1em {
+        margin: auto 1em;
+      }
+
+      .mar-top-1em {
+        margin-top: 1em;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .m-center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #image2 {
+        max-width: 100%;
+        width: 750px;
+        height: 750px;
+      }
+
+      .quote {
+        font-size: 0.7em;
+        text-align: center;
+      }
+
+      .connectedicon {
+        width: 15vw;
+        object-fit: cover;
+      }
+
+      .gridconnected {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 80vw;
+        margin: 2em auto;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        grid-gap: 2em;
+        font-size: 25px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        border: 2px black solid;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 2em;
+      }
+
+      .dark {
+        color: black;
+        margin-top: 1em;
+      }
+
+      .dark:hover {
+        color: #a02090;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagecontainer">
+      <div class="contentwrap">
+        <h1 class="heading">O.GRAPHIC</h1>
+
+        <div class="menu">
+          <a href="index.html">
+            <div>HOME</div>
+          </a>
+          <a href="about.html">
+            <div>ABOUT</div>
+          </a>
+          <a href="contact.html">
+            <div>CONTACT</div>
+          </a>
+          <a href="work.html">
+            <div>WORK</div>
+          </a>
+          <a href="testimony.html">
+            <div>TESTIMONY</div>
+          </a>
+        </div>
+
+        <div class="width-70 mar-top-1em m-center">
+          <div class="flex-row mar-top-1em m-center">
+            <div class="margin-lr-1em">
+              <p>Let's stay connected</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gridconnected">
+          <div class="contacts">
+            <img class="connectedicon" src="../image/ig.png" />
+            <a
+              class="contactlink dark"
+              target="_blank"
+              href="https://instagram.com/olhc_x_x/"
+              >olhc_x_x</a
+            >
+          </div>
+
+          <div class="contacts">
+            <img class="connectedicon" src="../image/fb.png" />
+            <a
+              class="contactlink dark"
+              target="_blank"
+              href="https://www.facebook.com/owenleehengchuan/"
+              >Owen Lee</a
+            >
+          </div>
+          <div class="contacts">
+            <img class="connectedicon" src="../image/email1.png" />
+            <a
+              class="contactlink dark"
+              target="_blank"
+              href="mailto:owen@gmail.com"
+              >owen@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-1-2 footer">
+        <p>© Owen Lee sdn bhd 2023</p>
+        <div>
+          <ul>
+            <li>
+              <img class="iconcontact" src="../image/email1.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="mailto:owen@gmail.com"
+                >owen@gmail.com</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/ig.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://instagram.com/olhc_x_x/"
+                >olhc_x_x</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/fb.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://www.facebook.com/owenleehengchuan/"
+                >Owen Lee</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

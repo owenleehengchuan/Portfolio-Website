@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O.GRAPHIC.com</title>
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico" />
+    <link href="nav.css" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: akira;
+        src: url("akira.otf");
+      }
+
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 182, 193, 0.8),
+            rgba(255, 182, 193, 0.9),
+            lightpink,
+            lightpink
+          ),
+          url("../image/background1.png");
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 75vh;
+
+        font-size: 20px;
+        font-family: "Akira", "Time News Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .heading {
+        padding: auto;
+        margin: auto;
+      }
+
+      p {
+        margin: auto;
+        text-align: justify;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .width-90 {
+        max-width: 90vw;
+      }
+
+      .margin-lr-1em {
+        margin: auto 1em;
+      }
+
+      .mar-top-1em {
+        margin-top: 1em;
+      }
+
+      .m-center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Setting the variables so changing one we'll change all following rules */
+      :root {
+        --width: 400px;
+        --num-of-imgs: 4;
+        --img-gap: 120px;
+        --time: 40s;
+      }
+
+      .graphicsize {
+        font-size: 2em;
+      }
+
+      .designsize {
+        width: var(--width);
+        height: var(--width);
+        margin-right: var(--img-gap);
+
+        flex-shrink: 0;
+        object-fit: cover;
+
+        padding: 0.5em;
+        border-radius: 4px;
+        background-color: rgba(0,0,0,0.5);
+      }
+
+      .carousel {
+        margin: 0.5em 0 0 0;
+        /* linear means it's not easing in/out etc, and this animation is infinitely repeated */
+        animation: carousel var(--time) linear infinite;
+        display: flex;
+        flex-wrap: nowrap;
+        width: calc(
+          var(--num-of-imgs) * 2 * var(--width) + var(--num-of-imgs) * 2 *
+            var(--img-gap)
+        );
+
+        padding: 1em 0;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel:hover {
+        animation-play-state: paused;
+      }
+
+      .carouselcontainer {
+        max-width: 100vw;
+        overflow-x: clip;
+      }
+
+      .carouselcontainer:first-child {
+        margin-top: 1em;
+      }
+
+      .carouselcontainer:nth-child(n + 2) {
+        margin-top: 3em;
+      }
+
+      @keyframes carousel {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(
+            calc(
+              -1 * calc(var(--num-of-imgs) * var(--width) + var(--num-of-imgs) *
+                    var(--img-gap))
+            ),
+            0,
+            0
+          );
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagecontainer">
+      <div class="contentwrap">
+        <h1 class="heading">O.GRAPHIC</h1>
+
+        <div class="menu">
+          <a href="index.html">
+            <div>HOME</div>
+          </a>
+          <a href="about.html">
+            <div>ABOUT</div>
+          </a>
+          <a href="contact.html">
+            <div>CONTACT</div>
+          </a>
+          <a href="work.html">
+            <div>WORK</div>
+          </a>
+          <a href="testimony.html">
+            <div>TESTIMONY</div>
+          </a>
+        </div>
+
+        <div class="flex-column">
+          <div class="carouselcontainer">
+            <div class="graphicsize width-90 m-center">
+              <p>GRAPHIC</p>
+            </div>
+
+            <div class="carousel">
+              <img class="designsize" src="../image/design1art.jpg" />
+              <img class="designsize" src="../image/design2art.jpg" />
+              <img class="designsize" src="../image/design3art.jpg" />
+              <img class="designsize" src="../image/design4art.jpg" />
+              <img class="designsize" src="../image/design1art.jpg" />
+              <img class="designsize" src="../image/design2art.jpg" />
+              <img class="designsize" src="../image/design3art.jpg" />
+              <img class="designsize" src="../image/design4art.jpg" />
+            </div>
+          </div>
+
+          <div class="carouselcontainer">
+            <div class="graphicsize width-90 m-center">
+              <p>DIGITAL PHOTOGRAPHY</p>
+            </div>
+
+            <div class="carousel">
+              <img class="designsize" src="../image/design1photo.jpg" />
+              <img class="designsize" src="../image/design2photo.jpg" />
+              <img class="designsize" src="../image/design3photo.JPG" />
+              <img class="designsize" src="../image/design4photo.jpg" />
+              <img class="designsize" src="../image/design1photo.jpg" />
+              <img class="designsize" src="../image/design2photo.jpg" />
+              <img class="designsize" src="../image/design3photo.JPG" />
+              <img class="designsize" src="../image/design4photo.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-1-2 footer">
+        <p>© Owen Lee sdn bhd 2023</p>
+        <div>
+          <ul>
+            <li>
+              <img class="iconcontact" src="../image/email1.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="mailto:owen@gmail.com"
+                >owen@gmail.com</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/ig.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://instagram.com/olhc_x_x/"
+                >olhc_x_x</a
+              >
+            </li>
+            <li>
+              <img class="iconcontact" src="../image/fb.png" />
+              <a
+                class="contactlink"
+                target="_blank"
+                href="https://www.facebook.com/owenleehengchuan/"
+                >Owen Lee</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
